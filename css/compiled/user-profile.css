@@ -1,0 +1,156 @@
+
+.user-profile .header .avatar {
+    border: 2px solid #E9ECEE;
+    float: left;
+    margin-right: 25px;
+    position: relative;
+    top: 3px;
+}
+.user-profile .header .name {
+    float: none;
+    font-weight: 600;
+    line-height: 26px;
+    margin: 20px 0 10px;
+}
+.user-profile .header span.area {
+    color: #7D848C;
+    font-size: 14px;
+    font-style: italic;
+}
+.user-profile .header a.btn-flat {
+    margin-top: 18px;
+}
+.user-profile .header a.delete-user {
+    font-size: 14px;
+    margin-left: 10px;
+}
+.user-profile .profile .profile-box {
+    border-top: 1px solid #DDE2E9;
+    padding-top: 23px;
+    width: 90%;
+}
+.user-profile .profile .section {
+    margin-bottom: 80px;
+}
+.user-profile .profile .section.comment {
+    margin-bottom: 100px;
+    margin-top: 60px;
+}
+.user-profile .profile .bio {
+    border-right: 1px solid #EDEEF1;
+    box-shadow: 4px 0 3px -1px rgba(226, 226, 226, 0.1);
+}
+.user-profile .profile .bio .span12 {
+    margin-left: 0;
+}
+.user-profile .profile .bio h6 {
+    font-size: 14px;
+    font-weight: 600;
+}
+.user-profile .profile .bio p {
+    color: #777E86;
+}
+.user-profile .profile .bio textarea {
+    height: 80px;
+    margin-bottom: 13px;
+    width: 97%;
+}
+.user-profile .profile .bio .submit-box {
+    text-align: right;
+}
+.user-profile .profile .bio .submit-box input.btn-flat {
+    font-weight: 500;
+}
+.user-profile .profile .bio .submit-box span {
+    color: #7E91AA;
+    display: inline-block;
+    font-weight: 600;
+    margin: 0 2px 0 8px;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+.user-profile .profile .bio .submit-box input.reset {
+    color: #7E91AA;
+    font-weight: 500;
+}
+.user-profile .address h6 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    margin-left: 30px;
+}
+.user-profile .address iframe {
+    float: right;
+    margin-bottom: 30px;
+    width: 90%;
+}
+.user-profile .address ul {
+    list-style: none outside none;
+    margin-left: 30px;
+    padding: 0;
+}
+.user-profile .address ul li {
+    font-size: 13px;
+    line-height: 21px;
+}
+.user-profile .address ul li.ico-li {
+    margin: 7px 0;
+}
+.user-profile .address ul i {
+    display: inline-block;
+    margin-right: 7px;
+    position: relative;
+    top: 4px;
+}
+.user-profile .address ul i.ico-mail {
+    margin-right: 5px;
+}
+.user-profile .address ul {
+    margin-left: 18px;
+}
+.user-profile .address ul i {
+    display: none;
+}
+.user-profile .address ul li.ico-li {
+    font-weight: bold;
+}
+.user-profile .address ul li.ico-li a {
+    font-weight: normal;
+}
+.user-profile .profile .bio {
+    /*
+    border-bottom: 1px solid #EDEEF1;
+    border-right: 0 none;
+    box-shadow: 0 4px 3px -1px rgba(226, 226, 226, 0.1);
+    */
+}
+.user-profile .profile .bio .span12 {
+    width: auto;
+}
+.user-profile .profile .profile-box {
+    width: 100%;
+}
+.user-profile .address {
+    margin-top: 44px;
+}
+.user-profile .address iframe {
+    width: 100%;
+}
+.user-profile .address h6 {
+    margin-left: 0;
+}
+.user-profile .address ul {
+    margin: 0;
+}
+.user-profile .header a.btn-flat {
+    margin: 0;
+}
+.user-profile .header a.edit {
+    margin-right: 10px;
+}
+.user-profile .header a.btn-flat {
+    margin: 0;
+}
+.user-profile .header a.edit {
+    margin-right: 10px;
+}

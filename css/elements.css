@@ -1,0 +1,476 @@
+
+.btn-group.large button.glow {
+    font-size: 13px;
+    padding: 6px 15px;
+}
+.btn-group button.glow.large {
+    font-size: 12px;
+}
+.btn-group.large i {
+    font-size: 13px;
+}
+.btn-group button.glow {
+    background: linear-gradient(to bottom, #FEFEFE 0%, #F7F7F7 100%) repeat scroll 0 0 transparent;
+    border: 1px solid #D0DDE9;
+    color: #313D4C;
+    font-family: "Open sans",Helvetica,Arial;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 14px;
+    padding: 5px 10px;
+    transition: color 0.1s linear 0s;
+}
+.btn-group button.glow:active, .btn-group button.glow.active {
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
+    color: #A8B5C7;
+}
+.btn-group button.glow.left {
+    border-radius: 4px 0 0 4px;
+    border-right: 0 none;
+}
+.btn-group button.glow.middle {
+    border-right: 0 none;
+}
+.btn-group button.glow.right {
+    border-radius: 0 4px 4px 0;
+}
+.btn-group button.glow:hover {
+    color: #A8B5C7;
+}
+.btn-group > .btn.glow {
+    border: 1px solid #D0DDE9;
+    color: #313D4C;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14px;
+    padding: 6px 14px;
+}
+.btn-group > .btn.glow.dropdown-toggle {
+    padding: 6px 9px;
+}
+.btn-group > .btn.glow .caret {
+    margin-top: 6px;
+}
+.btn-group > .btn.glow:hover {
+    background: linear-gradient(to bottom, #FEFEFE 0%, #F7F7F7 100%) repeat scroll 0 0 transparent;
+}
+.btn-group .dropdown-menu > li > a {
+    font-size: 12px;
+}
+.btn-flat.small {
+    font-size: 11px;
+    padding: 5px 9px;
+}
+.btn-flat.large {
+    font-size: 13px;
+    padding: 10px 16px;
+}
+.btn-flat, .btn-flat.default {
+    background: none repeat scroll 0 0 #4387BF;
+    border: 1px solid #3883C0;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 15px;
+    margin: 0;
+    padding: 7px 14px;
+    text-shadow: none;
+    transition: all 0.1s linear 0s;
+    vertical-align: middle;
+}
+.btn-flat:active {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.3) inset;
+}
+.btn-flat:hover {
+    color: #FFFFFF;
+    opacity: 0.87;
+    text-decoration: none;
+}
+.btn-flat:active {
+    background: none repeat scroll 0 0 #30628B;
+    opacity: 1;
+}
+.btn-flat.inverse {
+    background: none repeat scroll 0 0 #343E4B;
+    border: 1px solid #000000;
+}
+.btn-flat.inverse:active {
+    background: none repeat scroll 0 0 #000000;
+}
+.btn-flat.gray {
+    background: none repeat scroll 0 0 #7E91AA;
+    border: 1px solid #888E97;
+}
+.btn-flat.gray:active {
+    background: none repeat scroll 0 0 #5D6B7E;
+    color: #F3F3F3;
+}
+.btn-flat.primary {
+    background: none repeat scroll 0 0 #3B9FF3;
+    border: 1px solid #3596E7;
+}
+.btn-flat.primary:active {
+    background: none repeat scroll 0 0 #2B76B6;
+    color: #EDF6FD;
+}
+.btn-flat.success {
+    background: none repeat scroll 0 0 #96BF48;
+    border: 1px solid #7EA13D;
+    font-weight: 600;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+}
+.btn-flat.white {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #D0DDE9;
+    color: #626263;
+}
+.btn-flat.white:hover {
+    border-color: #BBBBBB;
+    color: #000000;
+}
+.btn-flat.info {
+    background: none repeat scroll 0 0 #5BA0A3;
+    border-color: #5BA0A3;
+    color: #FFFFFF;
+}
+.btn-flat.info:active {
+    background: none repeat scroll 0 0 #30696C;
+}
+.btn-flat.danger {
+    background: none repeat scroll 0 0 #B85E80;
+    border-color: #B85E80;
+    color: #FFFFFF;
+}
+.btn-flat.danger:active {
+    background: none repeat scroll 0 0 #6E354A;
+}
+.btn-flat.icon {
+    background: none repeat scroll 0 0 #E6EBF3;
+    border: 1px solid #D8DDE4;
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.4) inset, 0 1px 0 0 #CCCCCC;
+    color: #1A2129;
+    padding: 7px 10px;
+}
+.btn-flat.icon:active {
+    background: none repeat scroll 0 0 #E0E6EF;
+    box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.3) inset;
+}
+.btn-flat.icon i {
+    font-size: 14px;
+}
+.btn-flat [class^="icon-"], .btn-flat [class*=" icon-"] {
+    margin-right: 3px;
+}
+.btn-glow.small {
+    font-size: 11px;
+    padding: 4px 7px;
+}
+.btn-glow.large {
+    font-size: 14px;
+    padding: 9px 16px;
+}
+.btn-glow {
+    background: linear-gradient(to bottom, #FFFFFF 0%, #EEF0F1 100%) repeat scroll 0 0 transparent;
+    border: 1px solid #E5E5E5;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.2) inset, 0 1px 0 0 #CCCCCC;
+    color: #333333;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+    padding: 5px 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+.btn-glow:hover {
+    background: linear-gradient(to bottom, #FFFFFF 0%, #E6E6E6 100%) repeat scroll 0 0 transparent;
+    text-decoration: none;
+}
+.btn-glow:active, .btn-glow.active {
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset !important;
+}
+.btn-glow [class^="icon-"], .btn-glow [class*=" icon-"] {
+    margin-right: 3px;
+}
+.btn-glow i.shuffle {
+    top: 2px;
+}
+.btn-glow.inverse {
+    background: linear-gradient(to bottom, #353F4C 0%, #222A33 100%) repeat scroll 0 0 transparent;
+    border-color: #000000;
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.5) inset;
+    color: #FFFFFF;
+}
+.btn-glow.inverse:hover {
+}
+.btn-glow.primary {
+    background: linear-gradient(#54B3FF, #0078D9) repeat scroll 0 0 transparent;
+    border-color: #2480C2;
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.5) inset;
+    color: #FFFFFF;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
+}
+.btn-glow.primary:hover {
+    background: linear-gradient(#389BEB, #0078D9) repeat scroll 0 0 transparent;
+}
+.btn-glow.primary:active {
+    background: linear-gradient(#389BEB, #0078D9) repeat scroll 0 0 transparent;
+}
+.btn-glow.primary[disabled] {
+    background: none repeat scroll 0 0 #81B7E2 !important;
+    border: 0 none;
+    box-shadow: none !important;
+    cursor: default;
+}
+.btn-glow.success {
+    background: linear-gradient(to bottom, #A9D651 0%, #96BF48 100%) repeat scroll 0 0 transparent;
+    border: 1px solid #99BD56;
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.5) inset;
+    color: #FFFFFF;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.247);
+}
+.slider-frame.info {
+    background-color: rgba(92, 160, 163, 0.9);
+}
+.slider-frame.success {
+    background-color: rgba(151, 192, 73, 0.9);
+}
+.slider-frame.primary {
+    background-color: rgba(91, 158, 214, 0.9);
+}
+.slider-frame.danger {
+    background-color: #D94774;
+}
+.slider-frame {
+    background-color: #D5DDE4;
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.3) inset;
+    display: inline-block;
+    height: 23px;
+    margin: 0 auto;
+    position: relative;
+    width: 67px;
+}
+.slider-button {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #D0DDE9;
+    border-radius: 9px 9px 9px 9px;
+    color: #000000;
+    cursor: pointer;
+    display: block;
+    font-family: sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    height: 21px;
+    line-height: 23px;
+    text-align: center;
+    transition: all 0.25s ease-in-out 0s;
+    width: 37px;
+}
+.slider-button.on {
+    margin-left: 29px;
+}
+.ui-select {
+    background-attachment: scroll, scroll;
+    background-clip: border-box, border-box;
+    background-color: transparent;
+    background-image: url("../img/select-bg.png"), linear-gradient(to bottom, #FFFFFF 0%, #F0F1F2 100%);
+    background-origin: padding-box, padding-box;
+    background-position: 94% center;
+    background-repeat: no-repeat;
+    background-size: auto auto, auto auto;
+    border: 1px solid #CFDDE8;
+    border-radius: 5px 5px 5px 5px;
+    display: inline-block;
+    height: 25px;
+    margin-left: 0 !important;
+    min-height: 25px !important;
+    min-width: 100px;
+    overflow: hidden;
+    position: relative;
+    vertical-align: middle;
+    width: 137px;
+}
+.ui-select select {
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+    color: #737F8D;
+    font-family: "Open Sans",Arial;
+    font-size: 12px;
+    height: 25px;
+    line-height: inherit;
+    padding: 1px 30px 0 7px;
+    text-shadow: 1px 1px 1px #FFFFFF;
+    width: 135%;
+}
+.ui-slider {
+    background: none repeat scroll 0 0 #EDEEEF;
+    border: 1px solid #CFDDE8;
+    box-shadow: 0 -3px 7px 0 #FFFFFF inset;
+    height: 4px;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    background: url("../img/jquery-ui/slider-handler.png") no-repeat scroll 0 0 transparent;
+    border: medium none;
+    height: 17px;
+    outline: 0 none;
+    top: -6px;
+    width: 16px;
+}
+.ui-slider.vertical-handler .ui-state-default {
+    background: url("../img/jquery-ui/slider-handler2.png") no-repeat scroll 0 0 transparent;
+    height: 21px;
+    top: -8px;
+    width: 11px;
+}
+.ui-slider .ui-slider-range {
+    background: none repeat scroll 0 0 #4FAEEF;
+    border: 1px solid #30A1EC;
+    box-shadow: 0 0 3px 0 #FFFFFF inset;
+}
+.ui-slider.success .ui-slider-range {
+    background: none repeat scroll 0 0 #96BF48;
+    border: 1px solid #79AF5E;
+}
+.ui-slider.info .ui-slider-range {
+    background: none repeat scroll 0 0 #5BA0A3;
+    border: 1px solid #5BA0A3;
+}
+.pop-dialog {
+    display: inline-block;
+    z-index: 10000;
+}
+.pop-dialog.is-visible {
+    animation: 0.2s ease-out 0s normal none 1 reveal;
+    display: block;
+}
+.pop-dialog .pointer {
+    position: relative;
+    top: -22px;
+}
+.pop-dialog .pointer .arrow, .pop-dialog .pointer .arrow_border {
+    border-color: transparent transparent #FFFFFF;
+    border-style: solid;
+    border-width: 8px;
+    cursor: pointer;
+    left: 25px;
+    position: absolute;
+    top: 7px;
+    z-index: 1002;
+}
+.pop-dialog .pointer .arrow_border {
+    border-color: transparent transparent #A1A1A1;
+    border-width: 9px;
+    left: 24px;
+    top: 4px;
+    z-index: 1001;
+}
+.pop-dialog .pointer.right .arrow {
+    left: auto;
+    right: 25px;
+}
+.pop-dialog .pointer.right .arrow_border {
+    left: auto;
+    right: 24px;
+}
+.pop-dialog .body {
+    background-color: #FFFFFF;
+    border: 1px solid #A1A1A1;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 9px 0 #D6D6D6;
+    padding: 10px;
+    width: auto;
+}
+.ui-dropdown {
+    display: inline-block;
+    position: relative;
+}
+.ui-dropdown .head {
+    background: linear-gradient(to bottom, #FFFFFF 0%, #F8F8F8 47%, #F4F4F4 100%) repeat scroll 0 0 transparent;
+    border: 1px solid #DEDEDE;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 1px 1px 4px 0 #EFEFEF;
+    color: #272727;
+    cursor: pointer;
+    font-size: 13px;
+    padding: 4px 46px 4px 12px;
+    position: relative;
+    text-shadow: 1px 1px 1px #FFFFFF;
+}
+.ui-dropdown .head:hover, .ui-dropdown .head.active {
+    background: linear-gradient(to bottom, #FFFFFF 0%, #FDFDFD 47%, #F1F1F1 100%) repeat scroll 0 0 transparent;
+}
+.ui-dropdown .head:active, .ui-dropdown .head.active {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.ui-dropdown .head i.arrow-down {
+    position: absolute;
+    right: 16px;
+    top: 12px;
+}
+.ui-dropdown .dialog {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 42px;
+    z-index: 100;
+}
+.ui-dropdown .dialog.is-visible {
+    animation: 0.2s ease-out 0s normal none 1 reveal;
+    display: block;
+}
+.ui-dropdown .dialog .pointer {
+    position: relative;
+    top: -22px;
+}
+.ui-dropdown .dialog .pointer .arrow, .ui-dropdown .dialog .pointer .arrow_border {
+    border-color: transparent transparent #FFFFFF;
+    border-style: solid;
+    border-width: 8px;
+    cursor: pointer;
+    position: absolute;
+    right: 25px;
+    top: 7px;
+    z-index: 1002;
+}
+.ui-dropdown .dialog .pointer .arrow_border {
+    border-color: transparent transparent #A1A1A1;
+    border-width: 9px;
+    right: 24px;
+    top: 4px;
+    z-index: 1001;
+}
+.ui-dropdown .dialog .body {
+    background-color: #FFFFFF;
+    border: 1px solid #A1A1A1;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 9px 0 #D6D6D6;
+    padding: 8px 10px;
+    width: 440px;
+}
+.ui-dropdown .dialog .body p.title {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.ui-dropdown .dialog .body .form {
+}
+.ui-dropdown .dialog .body .form select {
+    display: inline-block;
+    height: 27px;
+    margin-right: 2px;
+    vertical-align: top;
+    width: 120px;
+}
+.ui-dropdown .dialog .body .form input[type="text"] {
+    height: 17px;
+    margin-right: 2px;
+    width: 90px;
+}
+.ui-dropdown .dialog .body .form a {
+    vertical-align: top;
+}

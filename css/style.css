@@ -1,0 +1,189 @@
+body
+{
+	background: url("../img/body-bg.png") repeat scroll 0 0 #E9E9E9;
+	font: 13px/1.7em 'Open Sans';
+}
+a
+{
+	color: #555555;
+}
+.table caption + thead tr:first-child th, .table caption + thead tr:first-child td, .table colgroup + thead tr:first-child th, .table colgroup + thead tr:first-child td, .table thead:first-child tr:first-child th, .table thead:first-child tr:first-child td {
+    border-top: 0 none;
+    padding-top: 20px;
+}
+.table-products .table td a
+{
+	display: inline-block;
+	font-size: 16px;
+	margin-top: 6px;
+	text-decoration: none;
+}
+.form-page .form-wrapper
+{
+	margin-bottom: 40px;
+}
+.form-page .form-wrapper .field-box
+{
+	float: left;
+	margin-bottom: 30px;
+	margin-left: 0;
+	width: 100%;
+}
+.form-page .form-wrapper label
+{
+	cursor: auto;
+	display: inline-block;
+	float: left;
+	font-size: 12px;
+	font-weight: 600;
+	text-align: left;
+	width: 140px;
+}
+.form-page .form-wrapper input:-moz-placeholder
+{
+	font-style: italic;
+}
+.form-page .form-wrapper input:-ms-input-placeholder
+{
+	font-style: italic;
+}
+.form-page .form-wrapper input::-webkit-input-placeholder
+{
+	font-style: italic;
+}
+.form-page .form-wrapper .predefined
+{
+	position: relative;
+}
+.form-page .form-wrapper .predefined input
+{
+	padding-left: 40px;
+}
+.form-page .form-wrapper .predefined .value
+{
+	position: absolute;
+	top: 6px;
+}
+.form-page .form-wrapper label.checkbox
+{
+	color: #555;
+	cursor: pointer;
+}
+.form-page .form-wrapper label.radio
+{
+	color: #555;
+	cursor: pointer;
+	left: -20px;
+	position: relative;
+	width: 100%;
+}
+.form-page .form-wrapper label.checkbox,
+ .form-page .form-wrapper label.radio
+{
+	font-weight: lighter;
+	padding-left: 0px;
+}
+.form-page .form-wrapper label.checkbox input[type="checkbox"],
+ .form-page .form-wrapper label.checkbox input[type="radio"],
+ .form-page .form-wrapper label.radio input[type="checkbox"],
+ .form-page .form-wrapper label.radio input[type="radio"]
+{
+	font-size: large;
+	margin-left: 0px;
+}
+.form-page .form-wrapper .wysi-column
+{
+	float: left;
+	width: 75%;
+}
+.form-page .form-wrapper .column.pull-right label
+{
+	display: block;
+	width: 100%;
+}
+.form-page .form-wrapper .column.pull-right .ui-select
+{
+	width: 250px;
+}
+.form-page .form-wrapper .select2-container
+{
+	margin-left: 0px;
+}
+.release_info
+{
+	cursor: auto;
+	display: inline-block;
+	float: left;
+	font-size: 14px;
+	font-weight: 400;
+	text-align: left;
+	width: 120px;
+}
+.release_data
+{
+	font-size: 16px;
+	font-weight: 400;
+    border-color: #DEE3EA;
+    border-radius: 0 0 0 0;
+    border-style: none none solid;
+    border-width: 0 0 1px;
+    box-shadow: none;
+}
+
+.rating span.star:before {
+    color: #999999;
+    content: "";
+    padding-right: 5px;
+}
+.rating span.star {
+    display: inline-block;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+}
+.rating {
+    direction: rtl;
+    font-size: 10px;
+}
+
+.table-products .table .img {
+	overflow: hidden;
+}
+
+.miniAvatar{
+	width: 60px;
+	height: 60px;
+}
+.avatar{
+	width: 120px;
+	height: 120px;
+}
+
+.thumbail > img{
+	max-width: 300px;
+}
+.activity-nav > li > a:focus {
+    padding: 3px 15px;
+}
+.activity-nav > li
+{
+	line-height: 24px;
+}
+.activity-nav > li > a 
+{
+	display: inline;
+	font-size: 15px;
+	color:#005580;
+}
+.activity-nav > li > a:hover
+{
+	background: none;
+}
+
+@media (max-width: 767px)
+{
+	.form-page .form-wrapper label.radio
+	{
+		left: 0px;
+	}
+}
