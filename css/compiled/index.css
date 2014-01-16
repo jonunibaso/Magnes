@@ -1,3 +1,16 @@
+
+.table-products .table img{
+ height:60px; 
+ width: 60px; 
+ float:left;
+ background:#FFF;
+ border:1px solid #dfe4eb;
+ text-align:center;
+ cursor:pointer;
+ margin-right:23px;
+}
+
+
 .section{border-top:1px solid #EDEFF1;box-shadow:0 6px 0 0 #FAFAFA inset;margin-top:100px;padding-top:45px;}
 #main-stats{background-color:#FDFDFD;border-bottom:1px solid #EFEEF3;margin-left:-20px;margin-right:-20px;}
 #main-stats .stats-row{box-shadow:-1px 0 5px 2px #F9F9F9 inset;}
@@ -32,7 +45,6 @@
 .table-products .table td.description{vertical-align:middle;color:#516372;}
 .table-products .table th input[type="checkbox"]{margin-top:4px;}
 .table-products .table input[type="checkbox"]{float:left;margin-top:11px;margin-right:23px;}
-.table-products .table .img{height:60px;float:left;background:#FFF;width: 60px;border:1px solid #dfe4eb;text-align:center;cursor:pointer;margin-right:23px;}
 .table-products .table ul.actions{float:right;margin:5px 0 0;padding:0;}
 .table-products .table ul.actions li{display:inline;border-right:1px solid #d0dde9;padding:5px 6px 0 3px;}
 .table-products .table ul.actions li.last{border:0 none;}
@@ -53,6 +65,9 @@ html > body .ui-pnotify{position:fixed;}
 .image_big img{margin:auto;}
 .hot_release{margin-bottom:20px;}
 .hot_release h3,.hot_release h4,.hot_release h5{margin-top:10px;}
+
+
+
 @media max-width 767px {
 #main-stats{margin-left:0;margin-right:0;}
 #pad-wrapper .ui-elements .knobs .knob-wrapper{float:inherit;}
