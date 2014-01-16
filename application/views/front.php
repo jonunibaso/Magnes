@@ -124,19 +124,19 @@
                     </div>
                 </div>
 
-                  <div class="span12" style=" margin-left: 0px;">
+                
+                  <div class="span12" style=" margin-left: 0px; text-align:center;">
                 <div class="hero-unit well" style="padding: 20px; font-size: 16px; line-height: 20px;">
-                    <p>The Magnes is a <b>Open Source CMS</b> for building music communities.</p>
+                    <p>The Magnes is an <b>Open Source CMS</b> for building music communities.</p>
                     <p>Users can post, share and discover releases making it bigger.</p>
                     <p>We are in an early beta, but you can sign in now!</p>
-                    <p>
-                        <a href="<? echo base_url('/auth/register'); ?>" class="btn btn-success btn-medium">
+                    <br/>
+                        <a href="http://www.themagnes.com/auth/register" class="btn btn-success btn-medium">
                             Sign in
                         </a>
-                        <a href="http://themagnesblog.tumblr.com/" class="btn btn-primary btn-medium">
-                            Development blog
+                        <a href="https://github.com/marblecode/Magnes" class="btn btn-primary btn-medium">
+                            Check at GitHub
                         </a>
-                    </p>
                 </div>
             </div>
             </div>
