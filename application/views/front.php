@@ -45,7 +45,12 @@
                 ?>
                 <div class="span2 hot_release" itemscope itemtype="http://schema.org/MusicAlbum">
                     <div class="thumbnail">
+                          <? if ($row->img_url!==""){?>
                         <img itemprop="thumbnailUrl" class="lazy" src="<? echo $row->img_url; ?>" data-src="<? echo $row->img_url; ?>" alt="<? echo $row->artist_name." - ".$row->title; ?>" width="260" height="260"/>
+                        <?}else{?>
+                        <img src="<? echo base_url('img/nocover_small.jpg'); ?>" data-src="<? echo base_url('img/nocover_big.jpg'); ?>" alt="<? echo $row->artist_name." - ".$row->title; ?>" width="260" height="260"/>
+
+                        <?}?>
                         <noscript>
                             <img itemprop="thumbnailUrl" src="<? echo $row->img_url; ?>" alt="<? echo $row->artist_name." - ".$row->title; ?>"/>
                         </noscript>

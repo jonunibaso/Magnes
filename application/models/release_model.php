@@ -381,6 +381,8 @@ function get_related($release)
       $this->db->join('music_genres', 'release.music_genres_id = music_genres.id','left');
       $this->db->join('labels', 'release.labels_id = labels.id','left');
       $this->db->limit(25);
+      $this->db->order_by('release.id','desc');
+
       $query = $this->db->get();
 
           if($query->num_rows() > 0)
