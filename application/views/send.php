@@ -4,11 +4,6 @@
 
     <div class="container-fluid">
         <div id="pad-wrapper">
-                <!-- <div class="row-fluid head">
-                    <div class="span12">
-                        <h4>Form wizard</h4>
-                    </div>
-                </div> -->
 
                 <div class="row-fluid">
                     <div class="span12">

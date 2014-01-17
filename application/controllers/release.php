@@ -48,6 +48,9 @@ class Release extends CI_Controller {
             	$data['lists'] = $this->list_model->get_by_userId( $data['user']->id);
             }
 
+            $data['related'] = $this->release_model->get_related($data['release']);
+
+
 			$this->load->view('includes/header', $data);
 			$this->load->view('includes/navbar'); 
 			$this->load->view('release/releaseView', $data);

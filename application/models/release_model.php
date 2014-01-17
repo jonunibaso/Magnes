@@ -348,6 +348,58 @@ function get_by_slug($slug)
   return $query->row();
 }
 
+function get_related($release)
+{
+
+  $this->load->database();
+  error_log($release->release_id);
+
+  $this->db->select('*, release.id as release_id');
+  $this->db->from('release');
+  $this->db->where('release.artist_id', $release->artist_id);
+  $this->db->where('release.id !=', $release->release_id);
+  $this->db->join('artist', 'artist.id = release.artist_id');
+  $this->db->join('music_genres', 'release.music_genres_id = music_genres.id','left');
+  $this->db->join('labels', 'release.labels_id = labels.id','left');
+  
+  $query = $this->db->get();
+  $r1 =  $query->result();
+
+  if($release->genre){
+      $this->db->select('*');
+      $this->db->from('music_genres');
+      $this->db->like('music_genres.genre', $release->genre, 'both');
+      $query = $this->db->get();
+      $rId =  $query->row();
+      $rId = $rId->id;
+
+      $this->db->select('*, release.id as release_id');
+      $this->db->from('release');
+      $this->db->where('release.id !=', $release->release_id);
+      $this->db->join('artist', 'artist.id = release.artist_id');
+      $this->db->where('release.music_genres_id', $rId);
+      $this->db->join('music_genres', 'release.music_genres_id = music_genres.id','left');
+      $this->db->join('labels', 'release.labels_id = labels.id','left');
+      $this->db->limit(25);
+      $query = $this->db->get();
+
+          if($query->num_rows() > 0)
+           {
+               foreach ($query->result() as $row) 
+                {
+                    $data[] = $row;                    
+                }
+                srand((float)microtime()*1000000); /* example from suffle function in PHP manual, values can be altered!*/
+                shuffle($data);
+                return $data;
+           }
+      $r2 =  $query->result();
+      $result =  array_merge($r1,$r2);
+  }
+  
+  return $result;
+}
+
 
 function delete($id)
 {
