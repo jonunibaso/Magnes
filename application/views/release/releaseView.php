@@ -8,7 +8,7 @@
         <div id="pad-wrapper" class="form-page">
             <div class="row-fluid form-wrapper">
                 <!-- left column -->
-                <div class="span8 column">
+                <div class="span7 column">
                     <form itemscope itemtype="http://schema.org/MusicAlbum">
                         <meta content="<? echo base_url('release/download/'.$release->slug); ?>" itemprop="url" />
                         <div class="field-box">
@@ -221,7 +221,7 @@
             </div>
 
             <!-- right column -->
-            <div class="span4 column pull-right">
+            <div class="span5 column pull-right">
               <div class="well" style="padding: 8px 0; margin-top: 20px;">
                         <ul class="nav nav-list">
                             <li class="nav-header">Related Releases</li>
