@@ -330,7 +330,7 @@ if($release->status==2){
                              <b><? echo $row->quality; ?></b>
                          </td>
                          <td class="">
-                            Direct Download<br>( <b><? echo $row->server; ?></b> )
+                             <b><? echo $row->server; ?></b>
                         </td>
                         <td>
                             <div class="btn-group btn-mini">
