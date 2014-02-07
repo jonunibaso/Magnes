@@ -1,0 +1,19 @@
+<div id="playlist">
+	<div class="module" style="height: 60px;"> 
+		<h3>Playlist</h3> 
+	</div> 
+  <div class="module" id="playlistContainer">
+    <ol class="items" data-bind="style:{bottom:showAd()?'150px':'0'}"> 
+      <!-- ko foreach:playlist -->
+			<li class="item" data-bind="
+			visible:isValid(),
+			click:$root.play,
+			css:{focus:on, even:$index()%2==1, odd:$index()%2==0}
+			">
+				<span class="title" data-bind="text:title"></span>&nbsp;
+			</li> 
+      <!-- /ko -->
+		</ol> 
+  
+	</div>
+</div>
