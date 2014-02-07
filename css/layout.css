@@ -415,8 +415,6 @@ input.search{
 .content {
 	min-width: 400px;
 	min-height: 620px;
-	margin-bottom: 100px;
-	padding-bottom: 50px;
 	overflow: hidden;
 	position: relative;
 	background: #fff;
@@ -653,4 +651,12 @@ input.search{
     padding: 1px 9px 3px;
    	font-size: 12px;
    	color: #333333
+}
+
+#footer_alert h4 {
+    color: #666;
+}
+
+#footer_alert{
+	
 }

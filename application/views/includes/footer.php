@@ -6,16 +6,18 @@ if($CurrentSecc===0){
 ?>
 
 <div style="clear:both"></div>
-<hr />
 <div class="row-fluid" style="">
   <div class="span12" style="margin: auto auto;">
-    <div class="alert alert-info">
+  <hr/>
+    <div class="alert" id="footer_alert" style="margin-bottom: 20px; background: transparent; border: none; font-size: 10px; color: #666;">
       <b>TheMagnes.com does not claim ownership or copyright of any media posted on this site.</b>
       <br> The files themselves are hosted by private or public third-parties. We do not DIRECTLY host any media. Files should only be used for promotional uses. You must delete them after 24 hours of downloading.
-      <br> We do not encourage copyrighting. You should support the Artists/Producers/Others for their work. If enjoy the music , we highly encourage you to acquire original copies to support the industry or artists.
+      We do not encourage copyrighting. You should support the Artists/Producers/Others for their work. If enjoy the music , we highly encourage you to acquire original copies to support the industry or artists.
     </div>
-    </div>
-    </div>
+  </div>
+</div>
+
+</div>
     <script type="text/javascript"> 
       var CI = { 
         'base_url': '<?php echo base_url(); ?>', 

@@ -8,16 +8,12 @@
 
 
             <div class="table-products" style="margin-top: 60px;">
+
+
                 <div class="row-fluid head">
                     <div class="span12">
                         <h4>Searching Artist:   <b style="margin-left: 10px;"><? echo str_replace('-',' ',$search_name); ?></b></h4>
                     </div>
-                        <!--
-                        <div class="span12" style="font-size: 16px;">
-                                All / Electronic / Rock
-                        </div>
-                    -->
-                </div>
                 <br>
                 <div class="row-fluid">
                     <table class="table table-hover">
@@ -212,8 +208,10 @@
 
           </tbody>
       </table>
+      <div style="margin-top:80px;">
+<iframe src="http://duckduckgo.com/search.html?width=400&duck=yes&site=themagnes.com&prefill=Search further at Duck Duck Go" style="overflow:hidden;margin:0;padding:0;width:100%;height:60px;" frameborder="0"></iframe> 
+     </div>
   </div>
-</div>
 </div>
 </div>
 </div>

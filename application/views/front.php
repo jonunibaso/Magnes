@@ -273,5 +273,3 @@
     <!-- end table  -->
 
 </div>
-</div>
-</div>

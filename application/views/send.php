@@ -178,7 +178,6 @@
                     </div>
 
                 </div>
-            </div>
         </div>
     </div>
     <div class="wizard-actions">
@@ -193,9 +192,5 @@
         </button>
     </div>
 </form>
-</div>
-</div>
-</div>
-</div>
 </div>
 <!-- end main container -->

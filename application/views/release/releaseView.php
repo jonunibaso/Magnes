@@ -437,8 +437,6 @@ if($release->status==2){
 
 
 </div>
-</div>
-</div>
 
 <!-- end main container -->
 

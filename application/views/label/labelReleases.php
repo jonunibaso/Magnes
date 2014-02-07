@@ -150,7 +150,4 @@
 
 </div>
 <!-- end table sample -->
-
-</div>
-</div>
 </div>
