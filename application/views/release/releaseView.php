@@ -457,20 +457,6 @@
 </div>
 <div class="row-fluid section" style="margin-top: 10px;">
 
-    <!-- AddThis Trending Content BEGIN -->
-    <div id="addthis_trendingcontent"></div>
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-51c2516e06c7fed9"></script>
-    <script type="text/javascript">
-        addthis.box("#addthis_trendingcontent", {
-            feed_title : "",
-            feed_type : "shared",
-            feed_period : "month",
-            num_links : 5,
-            height : "auto",
-            width : "auto"});
-    </script>
-    <!-- AddThis Trending Content END -->
-
 
 </div>
 
