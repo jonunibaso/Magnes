@@ -65,7 +65,7 @@ data-config="{'skin':'skins/magnes/skin.css','volume':100,'autoplay':false,'shuf
     <script type="text/javascript" src="<? echo base_url('lib/jquery.pnotify.min.js');?>"></script>
 
     <script src="<? echo base_url('js/linkChecker.js');?>"></script>
-    <script src="<? echo base_url('js/SoundCloudSearch.js');?>"></script>
+    <script src="<? echo base_url('js/soundCloudSearch.js');?>"></script>
 
       <? if ($this->ion_auth->is_admin()) { ?>
       <script src="<? echo base_url('js/editRelease.js');?>"></script>
