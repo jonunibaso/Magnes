@@ -286,6 +286,8 @@ $metaD = "The Magnes is an open sourced community for music sharing, discussing 
             <link href="<? echo base_url('css/lib/bootstrap.datepicker.css'); ?>" type="text/css" rel="stylesheet">
             <link rel="stylesheet" href="<? echo base_url('css/compiled/index.css'); ?>" type="text/css" media="screen" > 
             <link rel="styesheet" href="<? echo base_url('css/compiled/form-showcase.css'); ?>" type="text/css" media="screen" > 
+            <link rel="stylesheet" href="<? echo base_url('css/soundcloud_search.css'); ?>" type="text/css" media="screen" > 
+
             <?
             break;
 

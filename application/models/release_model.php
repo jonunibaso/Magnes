@@ -141,6 +141,9 @@ class Release_model extends CI_Model {
 
   $mysqldate = date( 'Y-m-d H:i:s' );
 
+  $rd = str_replace('00-', '',$this->input->post('date'));
+  $rd = str_replace(' ', '',$rd);
+
   $tracklist = strip_tags($this->input->post('tracklist'));
 
   $data = array(
@@ -148,7 +151,7 @@ class Release_model extends CI_Model {
    'title'=>$this->input->post('title'),
    'music_genres_id'=>$this->input->post('genre'),
    'tracklist'=> $tracklist,
-   'date'=>  $this->input->post('date'),
+   'date'=>  $rd,
    'labels_id'=> $discographyID,
    'countries_id'=> $this->input->post('country'),
    'extra_info'=>$extra,

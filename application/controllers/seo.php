@@ -25,6 +25,7 @@ class Seo extends CI_Controller {
         $this->db->select('*');
         $this->db->from('release');
         $this->db->order_by("release.id", "desc");
+        $this->db->limit(1000);
         $query = $this->db->get();
         $releases = $query->result();
 

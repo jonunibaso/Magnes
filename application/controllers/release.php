@@ -314,6 +314,29 @@ class Release extends CI_Controller {
 
 	    }
 
+	   	$this->db->select('*');
+	    $this->db->from('release');
+	    $this->db->like('date',' ');
+	    $query = $this->db->get();
+	    $releases = $query->result();
+
+	    foreach ($releases as $r) {
+
+	    	$oldDate = $r->date;
+	    	$newDate = str_replace(' ', '',$oldDate);
+	    	 
+	    	 $data = array(
+		     'date'=>$newDate,
+		     );
+
+		    $this->db->where('id',$r->id);
+		    $this->db->update('release', $data);
+			
+
+	    	echo "id: ".$r->id." - title: (".$r->title.") ".$oldDate." - ".$newDate."<br><br>";
+
+	    }
+
 	}
 
 	public function fixTracklists(){

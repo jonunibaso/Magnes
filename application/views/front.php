@@ -86,7 +86,7 @@
                         foreach ($top_downloads as $row)
                         { 
                             ?>
-                            <li><a href="<? echo base_url('release/download/'.$row->slug);?>"><? echo "<span style='font-size:14px; color:#005580;'>".$row->artist_name." - ".$row->title."</span> / ".$row->date."  ".$row->label_name; ?></a></li>
+                            <li><a href="<? echo base_url('release/download/'.$row->slug);?>"><? echo "<span style='font-size:14px; color:#005580;'>".$row->artist_name." - ".$row->title."</span> / ".$row->label_name." (".$row->date.")"; ?></a></li>
                             <?
                         }
                         ?>

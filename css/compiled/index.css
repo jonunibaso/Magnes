@@ -11,7 +11,7 @@
 }
 
 
-.section{border-top:1px solid #EDEFF1;box-shadow:0 6px 0 0 #FAFAFA inset;margin-top:100px;padding-top:45px;}
+.section{border-top:1px solid #EDEFF1; margin-top:100px;padding-top:45px;}
 #main-stats{background-color:#FDFDFD;border-bottom:1px solid #EFEEF3;margin-left:-20px;margin-right:-20px;}
 #main-stats .stats-row{box-shadow:-1px 0 5px 2px #F9F9F9 inset;}
 #main-stats .stat{border-right:1px solid #E8E9EE;box-shadow:1px 0 0 0 #FFF;position:relative;text-align:right;padding:30px 0 35px;}

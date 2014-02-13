@@ -11,12 +11,15 @@ if($CurrentSecc===0){
   <hr/>
     <div class="alert" id="footer_alert" style="margin-bottom: 20px; background: transparent; border: none; font-size: 10px; color: #666;">
       <b>TheMagnes.com does not claim ownership or copyright of any media posted on this site.</b>
+      <br>TheMagnes.com is in compliance with 17 U.S.C. § 512 and the Digital Millennium Copyright Act ("DMCA"). It is our policy to respond to any infringement notices and take appropriate actions under the Digital Millennium Copyright Act ("DMCA") and other applicable intellectual property laws.
+      <br>If your copyrighted material has been posted on TheMagnes.comg or if hyperlinks to your copyrighted material are returned through our search engine and you want this material removed, you must provide a written communication that details the information listed in the following section. Please be aware that you will be liable for damages (including costs and attorneys' fees) if you misrepresent information listed on our site that is infringing on your copyrights. We suggest that you first contact an attorney for legal assistance on this matter. 
       <br> The files themselves are hosted by private or public third-parties. We do not DIRECTLY host any media. Files should only be used for promotional uses. You must delete them after 24 hours of downloading.
       We do not encourage copyrighting. You should support the Artists/Producers/Others for their work. If enjoy the music , we highly encourage you to acquire original copies to support the industry or artists.
     </div>
   </div>
 </div>
 
+</div>
 </div>
     <script type="text/javascript"> 
       var CI = { 
@@ -62,6 +65,7 @@ data-config="{'skin':'skins/magnes/skin.css','volume':100,'autoplay':false,'shuf
     <script type="text/javascript" src="<? echo base_url('lib/jquery.pnotify.min.js');?>"></script>
 
     <script src="<? echo base_url('js/linkChecker.js');?>"></script>
+    <script src="<? echo base_url('js/SoundCloudSearch.js');?>"></script>
 
       <? if ($this->ion_auth->is_admin()) { ?>
       <script src="<? echo base_url('js/editRelease.js');?>"></script>
