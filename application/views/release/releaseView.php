@@ -52,7 +52,7 @@
 
                             <div class="field-box">
                                 <div class="release_info">Tracklist:</div>
-                                <textarea id="tracklist" class="span8" rows="4" <? if (!$this->ion_auth->is_admin()){ echo "readonly"; }?> style="cursor: pointer; margin-left: 15px; background: none repeat scroll 0 0 #FFFFFF; color: #333333;" itemprop="tracks"><? echo $release->tracklist; ?></textarea>
+                                <textarea id="tracklist" class="span8" rows="4" <? if (!$this->ion_auth->is_admin()){ echo "readonly"; }?> style="cursor: pointer; margin-left: 15px; background: none repeat scroll 0 0 #FFFFFF; color: #333333;" ><? echo $release->tracklist; ?></textarea>
 
                             </div>
                             <div class="field-box">

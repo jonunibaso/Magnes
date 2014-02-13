@@ -286,7 +286,21 @@ function get_top_downloads($offset)
   $query = $this->db->get();
   return $query->result();
 }
-
+function get_top_month($offset)
+{
+  $this->load->database();
+  $this->db->select('*, release.id as release_id');
+  $this->db->from('release');
+  $this->db->join('artist', 'artist.id = release.artist_id');
+  $this->db->join('music_genres', 'release.music_genres_id = music_genres.id');
+  $this->db->join('labels', 'release.labels_id = labels.id','left');
+  $this->db->like('release.insertedDate', '-02-', 'both');
+  $this->db->limit(19);
+  $this->db->offset($offset);
+  $this->db->order_by("release.views", "desc");
+  $query = $this->db->get();
+  return $query->result();
+}
 function get_hot_entries($offset)
 {
   $this->load->database();

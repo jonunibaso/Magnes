@@ -78,7 +78,7 @@
         </div>
 
         <div class="row-fluid">
-            <div class="span5">
+            <div class="span4">
                 <div class="well" style="padding: 8px 0; margin-top: 40px;">
                     <ul class="nav nav-list">
                         <li class="nav-header">Top Downloads</li>
@@ -93,7 +93,22 @@
                     </ul>
                 </div>
             </div>
-            <div class="span7">
+            <div class="span4">
+                <div class="well" style="padding: 8px 0; margin-top: 40px;">
+                    <ul class="nav nav-list">
+                        <li class="nav-header">Top New Releases Downloads</li>
+                        <?  
+                        foreach ($top_month as $row)
+                        { 
+                            ?>
+                            <li><a href="<? echo base_url('release/download/'.$row->slug);?>"><? echo "<span style='font-size:14px; color:#005580;'>".$row->artist_name." - ".$row->title."</span> / ".$row->label_name." (".$row->date.")"; ?></a></li>
+                            <?
+                        }
+                        ?>
+                    </ul>
+                </div>
+            </div>
+            <div class="span4">
                <div class="row-fluid">
                 <div class="span12">
 
