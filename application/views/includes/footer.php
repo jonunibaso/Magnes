@@ -37,7 +37,7 @@ if($CurrentSecc===0){
 
 
 <script type="text/javascript" src="<? echo base_url('js/smc/script.js');?>" 
-data-config="{'skin':'skins/magnes/skin.css','volume':100,'autoplay':false,'shuffle':true,'repeat':1,'placement':'bottom','showplaylist':true,
+data-config="{'skin':'skins/magnes/skin.css','volume':100,'autoplay':false,'shuffle':true,'repeat':1,'placement':'bottom','showplaylist':false,
 'playlist':[
 {'title':'Groove Podcast 26 - Helena Hauff','url':'https://soundcloud.com/groove-magazin/groove-podcast-26-helena-hauff'},
 {'title':'KidKameleon - New Leaves','url':'https://soundcloud.com/kidkameleon/new-leaves'},
