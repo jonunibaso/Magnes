@@ -13,6 +13,8 @@ class Front extends CI_Controller {
 		$data['next'] = 2;
 
         $data['top_downloads'] = $this->release_model->get_top_downloads(0);
+        $data['top_month'] = $this->release_model->get_top_month(0);
+
         $data['hot_release'] = $this->release_model->get_hot_entries(0);
 
         $data['last_activity'] = $this->activity_model->getLastActivity(0);

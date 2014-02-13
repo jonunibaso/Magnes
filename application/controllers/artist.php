@@ -78,7 +78,7 @@ class Artist extends CI_Controller {
 
 			$this->load->view('includes/header',$data); 
 			$this->load->view('includes/navbar'); 
-			$this->load->view('artistNotFound',$data);
+			$this->load->view('artist/artistNotFound',$data);
 			$this->load->view('includes/footer',$data);      
 
 		}
@@ -121,7 +121,7 @@ class Artist extends CI_Controller {
 
 		$this->load->view('includes/header'); 
 		$this->load->view('includes/navbar'); 
-		$this->load->view('artistList',$data);
+		$this->load->view('artist/artistList',$data);
 		$this->load->view('includes/footer');
 	}
 
