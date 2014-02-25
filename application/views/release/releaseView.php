@@ -156,7 +156,7 @@
                     <div class="field-box">
                         <div class="release_info">Share:</div>
                         <div class="span8 release_data">
-                            <!-- AddThis Button BEGIN -->
+                            <!-- 
                             <div class="addthis_toolbox addthis_default_style addthis_16x16_style">
                                 <a class="addthis_button_facebook"></a>
                                 <a class="addthis_button_email"></a>
@@ -165,7 +165,9 @@
                                 <a class="addthis_button_compact"></a><a class="addthis_counter addthis_bubble_style"></a>
                             </div>
                             <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=undefined"></script>
-                            <!-- AddThis Button END -->
+                           -->
+
+                          <div class='shareaholic-canvas' data-app='share_buttons' data-app-id='5103648'></div>
                         </div>
                     </div>
                     <? if ($this->ion_auth->logged_in()){
@@ -249,11 +251,16 @@
                     <div style="float: left; margin-right: 10px;">
                         <span class="badge badge-info"></span>
                     </div>
-                    <h3><?echo $release->artist_name;?> SoundCloud Sounds</h3>
+                    <h3 id="player_title">SoundCloud Sounds</h3>
                 </div>
             </div>
-            <div class="row-fluid section" style="margin-top: 10px;">
-                <div class="span12">
+    <audio id="player"></audio>
+
+    <div class="row-fluid" style="margin-top: 30px;">
+
+        <div class="span12" id="sounds">
+
+    </div>
 
                     <div style="text-align:center; display: none;">
                         <form id="sc_search"  action="javascript:void(0);">
@@ -263,13 +270,6 @@
                         </form>
 
                     </div>
-
-                    <div id="container" style="margin-top: 0px;">
-                        <audio id="player"></audio>
-                        <div id="sounds"></div>
-                    </div>
-
-                </div>
 
 
             </div>

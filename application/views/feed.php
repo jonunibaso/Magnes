@@ -69,17 +69,7 @@ function xml_entities($string) {
                     echo " (".xml_entities($post->date).")";
                 }
                 echo " Tracklist: ".xml_entities($post->tracklist);
-    $this->load->database();
-    $this->db->from('link_group');
-    $this->db->select('*, link_group.id as link_group_id');
-    $this->db->join('link', 'link_group.id = link.link_group_id');
-    $this->db->where('link_group.release_id', $post->release_id);
-    $this->db->order_by("link_group.inactive", "asc");
-    $query = $this->db->get();
-    foreach ($query->result() as $row) {   
-    echo "<br />Direct download from: ".$row->server.": ".$row->url;
-}
-?>]]></content:encoded>
+                ?><br>Download at <a href="<?=base_url('release/download/'.$post->slug)?>">The Magnes</a>]]></content:encoded>
 </item>    
 <?php endforeach;?>
 </channel>

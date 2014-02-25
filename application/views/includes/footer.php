@@ -35,20 +35,6 @@ if($CurrentSecc===0){
 
     <script src="<? echo base_url('js/theme.js');?>"></script>
 
-
-<script type="text/javascript" src="<? echo base_url('js/smc/script.js');?>" 
-data-config="{'skin':'skins/magnes/skin.css','volume':100,'autoplay':false,'shuffle':true,'repeat':1,'placement':'bottom','showplaylist':false,
-'playlist':[
-{'title':'Groove Podcast 26 - Helena Hauff','url':'https://soundcloud.com/groove-magazin/groove-podcast-26-helena-hauff'},
-{'title':'KidKameleon - New Leaves','url':'https://soundcloud.com/kidkameleon/new-leaves'},
-{'title':'NNA065: Migrations In Rust - Two Shadows','url':'https://soundcloud.com/nnatapes/sets/nna065'},
-{'title':'Alexx Rubio @ GREY Báilele!','url':'https://soundcloud.com/alex-rubio/bailele'},
-{'title':'MrRoboro -  Bears (Bear Mountain Reedit)','url':'https://soundcloud.com/gordonrecords/bears-bear-mountain-reedit?in=gordonrecords/sets/mrroboro-google-fashion-m-xico'},
-{'title':'Him_Self_Her OFF Podcast #126','url':'https://soundcloud.com/off-recordings/podcast-episode-126-him-self-her'}
-
-]}" ></script>
-
-
     <? if ($CurrentSecc=="send"){ ?>
 
     <script src="<? echo base_url('lib/fuelux.wizard.js');?>"></script>
@@ -98,6 +84,24 @@ data-config="{'skin':'skins/magnes/skin.css','volume':100,'autoplay':false,'shuf
 
 <? } ?>
 
+                        <script type="text/javascript">
+                        //<![CDATA[
+                          (function() {
+                            var shr = document.createElement('script');
+                            shr.setAttribute('data-cfasync', 'false');
+                            shr.src = '//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';
+                            shr.type = 'text/javascript'; shr.async = 'true';
+                            shr.onload = shr.onreadystatechange = function() {
+                              var rs = this.readyState;
+                              if (rs && rs != 'complete' && rs != 'loaded') return;
+                              var site_id = '9de1183f31169e1bc13dce6dd7bb689b';
+                              try { Shareaholic.init(site_id); } catch (e) {}
+                            };
+                            var s = document.getElementsByTagName('script')[0];
+                            s.parentNode.insertBefore(shr, s);
+                          })();
+                        //]]>
+                        </script>
 
 </body>
 </html>

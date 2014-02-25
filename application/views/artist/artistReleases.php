@@ -14,16 +14,8 @@
                         <i class="icon-music icon-4x pull-left icon-muted" style="margin-right: 10px;" ></i><h4 style="font-size: 20px;">Artist: <br>  <b style="margin-left: 0px;"><? echo $release[0]->artist_name; ?></b></h4>
                     </div>
                     <div class="span8" style="margin-top: 20px;">
-                        <!-- AddThis Button BEGIN -->
-                        <div class="addthis_toolbox addthis_default_style addthis_16x16_style">
-                            <a class="addthis_button_facebook"></a>
-                            <a class="addthis_button_email"></a>
-                            <a class="addthis_button_twitter"></a>
-                            <a class="addthis_button_google_plusone_share"></a>
-                            <a class="addthis_button_compact"></a><a class="addthis_counter addthis_bubble_style"></a>
-                        </div>
-                        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=undefined"></script>
-                        <!-- AddThis Button END -->
+                            <div class='shareaholic-canvas' data-app='share_buttons' data-app-id='5103648'></div>
+
                     </div>
 
 

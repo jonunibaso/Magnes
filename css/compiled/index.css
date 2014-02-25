@@ -66,6 +66,9 @@ html > body .ui-pnotify{position:fixed;}
 .hot_release{margin-bottom:20px;}
 .hot_release h3,.hot_release h4,.hot_release h5{margin-top:10px;}
 
+.modal.fade.in {
+    display: block !important;
+}
 
 
 @media max-width 767px {
