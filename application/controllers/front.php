@@ -31,6 +31,37 @@ class Front extends CI_Controller {
 		$this->db->from('labels');
 		$data['total_disco']  = $this->db->count_all_results();
 
+			
+
+		$this->load->library('pagination');
+		$total = $data['total_releases'];
+
+
+			$config['base_url'] =  base_url() .'/front/page/';
+			$config['total_rows'] = $total;
+			$config['per_page'] = 10;
+			$config['num_links'] = 20;
+			$config['use_page_numbers'] = TRUE;
+			$config['uri_segment'] = 3;
+			$config['num_tag_open'] = '<li>';
+			$config['num_tag_close'] = '</li>';
+			$config['next_tag_open'] = '<li>';
+			$config['next_tag_close'] = '</li>';
+			$config['prev_tag_open'] = '<li>';
+			$config['prev_tag_close'] = '</li>';
+			$config['cur_tag_open'] = '<li><a><b>';
+			$config['cur_tag_close'] = '</a></b></li>';
+			$config['first_tag_open'] = '<li>';
+			$config['first_tag_close'] = '</li>';
+			$config['last_tag_open'] = '<li>';
+			$config['last_tag_close'] = '</li>';
+
+			$this->pagination->initialize($config);
+
+			$data["links"] = $this->pagination->create_links();
+
+
+
 		$this->load->view('includes/header',$data); 
 		$this->load->view('includes/navbar'); 
 		$this->load->view('front',$data);
@@ -46,6 +77,7 @@ class Front extends CI_Controller {
 		
 		$this->load->model('release_model');
         $data['release'] = $this->release_model->get_last_ten_entries(($offset-1)*10);
+
 
         if($offset>1){
         	$data['previous'] = $offset-1;
@@ -64,6 +96,34 @@ class Front extends CI_Controller {
 
 		$this->db->from('labels');
 		$data['total_disco']  = $this->db->count_all_results();
+
+				$this->load->library('pagination');
+		$total = $data['total_releases'];
+
+
+			$config['base_url'] =  base_url() .'/front/page/';
+			$config['total_rows'] = $total;
+			$config['per_page'] = 10;
+			$config['num_links'] = 20;
+			$config['use_page_numbers'] = TRUE;
+			$config['uri_segment'] = 3;
+			$config['num_tag_open'] = '<li>';
+			$config['num_tag_close'] = '</li>';
+			$config['next_tag_open'] = '<li>';
+			$config['next_tag_close'] = '</li>';
+			$config['prev_tag_open'] = '<li>';
+			$config['prev_tag_close'] = '</li>';
+			$config['cur_tag_open'] = '<li><a><b>';
+			$config['cur_tag_close'] = '</a></b></li>';
+			$config['first_tag_open'] = '<li>';
+			$config['first_tag_close'] = '</li>';
+			$config['last_tag_open'] = '<li>';
+			$config['last_tag_close'] = '</li>';
+
+			$this->pagination->initialize($config);
+
+			$data["links"] = $this->pagination->create_links();
+		
 		
 		if(($offset)*10> $data['total_releases'])
 		{
@@ -74,6 +134,7 @@ class Front extends CI_Controller {
 		{
 	        $data['next'] = $offset+1;
 		}
+		
 
 		$this->load->view('includes/header',$data); 
 		$this->load->view('includes/navbar'); 

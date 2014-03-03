@@ -270,19 +270,16 @@
             </table>
         </div>
 
-        <div class="pagintaion" style="width: 170px; margin: auto auto;">
-            <? if (isset($previous)){
-                ?>
-                <a class="btn-glow" style="font-size: 16px;" href="<? if($previous==1){ echo base_url(); }else{ echo base_url('front/page/'.$previous); }?>"> <i class="icon-chevron-left" style="font-size:12px;"></i> Previous </a>
-                <?
-            }
-            if (isset($next)){
-                ?>
-                <a class="btn-glow" style="font-size: 16px; margin-left: 10px;" href="<? echo base_url('front/page/'.$next);?>"> Next <i class="icon-chevron-right" style="font-size:12px;"></i> </a>
-                <?
-            }
-            ?>   
-        </div>
+
+
+<div class="pagination">
+  <ul>
+
+    <?
+    echo $links;
+    ?>
+</ul>
+</div>
 
     </div>
     <!-- end table  -->

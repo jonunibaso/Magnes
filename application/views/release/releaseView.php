@@ -20,9 +20,9 @@
                           <? }else{ ?>
                                 <div style="border: 1px solid #ddd; width: 220px; height: 220px; overflow: hidden; background: url('<? echo $release->img_url; ?>'); background-size: cover;">
                                     <img itemprop="thumbnailUrl"  style="display: none;" class="lazy" src="<? echo $release->img_url; ?>" data-src="<? echo $release->img_url; ?>" alt="<? echo $release->artist_name." - ".$release->title; ?>"/>
-                                    <noscript>
+                                    <!--<noscript>
                                         <img itemprop="thumbnailUrl" height="220" src="<? echo $release->img_url; ?>" alt="<? echo $release->artist_name." - ".$release->title; ?>"/>
-                                    </noscript>
+                                    </noscript>-->
                                     <? } ?>
                                 </div>
                             </div>
