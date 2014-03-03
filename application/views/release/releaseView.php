@@ -41,7 +41,9 @@
                         <div class="field-box">
                             <div class="release_info">Release:</div>
                             <? if ($this->ion_auth->is_admin()){ ?>
-                            <input type="text" value="<? echo $release->title; ?>" style="width: 450px; margin-left: 20px;"/>
+                            <input type="text" value="<? echo $release->title; ?>" id="release_new_name" style="width: 450px; margin-left: 20px;"/>
+                            <br><a id="renameReleaseBtn" class="btn">Rename</a><br><hr/>
+
                             <? }else{?>
                             <div class="span8 release_data" itemprop="name"><? echo $release->title; ?></div>
                             <?}?>
@@ -244,35 +246,36 @@
                     </div>
                 </div>
             </div>
+
+
             <hr/>
             <div class="row-fluid head"  style="margin-top: 60px;">
 
-                <div class="span12">
-                    <div style="float: left; margin-right: 10px;">
-                        <span class="badge badge-info"></span>
-                    </div>
-                    <h3 id="player_title">SoundCloud Sounds</h3>
+                <div class="span6">
+                        <h3 id="player_title"><?echo $release->artist_name;?> SoundCloud Sounds</h3>
+                        <audio id="player"></audio>
+                        <div style="text-align:center; display: none;">
+                            <form id="sc_search"  action="javascript:void(0);">
+                                <input id="q" name="q" value="<?echo $release->artist_name;?>">
+                                <input type="hidden" name="client_id" value="0bcc7c4bcd2b5b55b23ab538c02f70c0">
+                                <input type="hidden" name="order" value="hotness">
+                            </form>
+                        </div>
+                        <div class="row-fluid" style="margin-top: 30px;">
+                            <div class="span12" id="sounds"></div>
+                        </div>
                 </div>
-            </div>
-    <audio id="player"></audio>
 
-    <div class="row-fluid" style="margin-top: 30px;">
 
-        <div class="span12" id="sounds">
-
-    </div>
-
-                    <div style="text-align:center; display: none;">
-                        <form id="sc_search"  action="javascript:void(0);">
-                            <input id="q" name="q" value="<?echo $release->artist_name;?>">
-                            <input type="hidden" name="client_id" value="0bcc7c4bcd2b5b55b23ab538c02f70c0">
-                            <input type="hidden" name="order" value="hotness">
-                        </form>
-
+                <div class="span6">
+                    <h3><?echo $release->artist_name;?> Youtubes</h3>
+                     <div class="row-fluid" style="margin-top: 30px;">
+                        <div class="span12" id="youtubes"></div>
                     </div>
-
-
+               </div>
             </div>
+
+
             <hr/>
             <?
             if($release->status==2){

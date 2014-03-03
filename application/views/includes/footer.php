@@ -52,6 +52,7 @@ if($CurrentSecc===0){
 
     <script src="<? echo base_url('js/linkChecker.js');?>"></script>
     <script src="<? echo base_url('js/soundCloudSearch.js');?>"></script>
+    <script src="<? echo base_url('js/youtubeSearch.js');?>"></script>
 
       <? if ($this->ion_auth->is_admin()) { ?>
       <script src="<? echo base_url('js/editRelease.js');?>"></script>

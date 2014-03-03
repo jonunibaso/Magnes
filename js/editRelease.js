@@ -38,6 +38,21 @@
 
       });
 
+      $('#renameReleaseBtn').on('click', function()
+      {
+        newName = $('#release_new_name').val();
+
+        $.ajax({
+          url:  CI.base_url+"release/renameRelease",
+          type:'POST',
+          data: { id: $('#release_id').val(), nt: newTrack },
+          success: function(output_string){
+            alert('updated');
+          } 
+        });
+
+      });
+
       $('#saveStatusBtn').on('click', function()
       {
         newStatus = $('#releaseStatus').val();
