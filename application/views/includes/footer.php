@@ -45,6 +45,11 @@ if($CurrentSecc===0){
 
     <script src="<? echo base_url('js/adminEdit.js');?>"></script>
 
+    <? } if ($CurrentSecc=="artist"){ ?>
+
+    <script src="<? echo base_url('js/soundCloudSearch.js');?>"></script>
+    <script src="<? echo base_url('js/youtubeSearch.js');?>"></script>
+
 
     <? } if ($CurrentSecc=="release"){ ?>
 

@@ -56,7 +56,7 @@
                         </noscript>
                     </div>
                     <div class="caption" style="width:80%; margin: auto auto">
-                        <h3 itemprop="byArtist"><? echo $row->artist_name; ?></h3>
+                        <h3><a href="<? echo base_url('artist/view/'.$row->artist_slug);?>" class="link"  style="color: #005580;" data-original-title="Search <? echo $row->artist_name; ?> Releases" itemprop="byArtist"><? echo $row->artist_name; ?></a></h3>
                         <h4 itemprop="name"><? echo $row->title; ?></h4>
                         <h5>
                         <? if($row->label_slug!=""){ ?>

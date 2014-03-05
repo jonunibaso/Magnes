@@ -121,19 +121,8 @@
           </tbody>
       </table>
   </div>
-  <div class="pagintaion" style="width: 170px; margin: auto auto;">
-    <? if (isset($previous)){
-        ?>
-        <a class="btn-glow" style="font-size: 16px;" href="<? echo base_url('front/page/'.$previous);?>"> <i class="icon-chevron-left" style="font-size:12px;"></i> Previous </a>
-        <?
-    }
-    if (isset($next)){
-        ?>
-        <a class="btn-glow" style="font-size: 16px; margin-left: 10px;" href="<? echo base_url('front/page/'.$next);?>"> Next <i class="icon-chevron-right" style="font-size:12px;"></i> </a>
-        <?
-    }
-    ?>   
-</div>
+
+
 
 <div class="pagination">
   <ul>
@@ -143,17 +132,35 @@
     ?>
 </ul>
 </div>
-                    <!--
-                        <li><a href="#">&#8249;</a></li>
-                        <li><a class="active" href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">&#8250;</a></li>
-                      </ul>
+   <hr/>
+            <div class="row-fluid head"  style="margin-top: 60px;">
+
+                <div class="span6">
+                        <h3 id="player_title"><?echo $release[0]->artist_slug;?> SoundCloud Sounds</h3>
+                        <audio id="player"></audio>
+                        <div style="text-align:center; display: none;">
+                            <form id="sc_search"  action="javascript:void(0);">
+                                <input id="q" name="q" value="<?echo $release[0]->artist_slug;?>">
+                                <input type="hidden" name="client_id" value="0bcc7c4bcd2b5b55b23ab538c02f70c0">
+                                <input type="hidden" name="order" value="hotness">
+                            </form>
+                        </div>
+                        <div class="row-fluid" style="margin-top: 30px;">
+                            <div class="span12" id="sounds"></div>
+                        </div>
+                </div>
+
+
+                <div class="span6">
+                    <h3><?echo $release[0]->artist_slug;?> Youtubes</h3>
+                     <div class="row-fluid" style="margin-top: 30px;">
+                        <div class="span12" id="youtubes"></div>
                     </div>
-                -->
+               </div>
             </div>
-            <!-- end table sample -->
+
+
+            <hr/>
+            </div>
 
         </div>
