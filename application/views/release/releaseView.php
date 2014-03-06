@@ -376,19 +376,19 @@
                                           <a class="btn btn-mini link" data-original-title="Good" <? if (!$this->ion_auth->logged_in()){ 
                                             echo "data-toggle='modal' href='#notLoggedModal'"; 
                                         }else{
-                                            echo "onclick='rateLink(".$row->link_group_id.",1);'"; 
+                                            echo "onclick='rateLink(".$row->link_group_id.",1);' href='#'"; 
                                         } ?> >
                                         <i class="icon-circle-arrow-up"></i></a>
                                         <a class="btn btn-mini link" data-original-title="Bad" <? if (!$this->ion_auth->logged_in()){ 
                                             echo "data-toggle='modal' href='#notLoggedModal'"; 
                                         }else{
-                                            echo "onclick='rateLink(".$row->link_group_id.",2);'"; 
+                                            echo "onclick='rateLink(".$row->link_group_id.",2);' href='#'"; 
                                         } ?> >
                                         <i class="icon-circle-arrow-down"></i></a>
                                         <a class="btn btn-mini btn-danger link"  data-original-title="Invalid" <? if (!$this->ion_auth->logged_in()){ 
                                             echo "data-toggle='modal' href='#notLoggedModal'"; 
                                         }else{
-                                            echo "onclick='rateLink(".$row->link_group_id.",3);'"; 
+                                            echo "onclick='rateLink(".$row->link_group_id.",3);' href='#'"; 
                                         } ?> >
                                         <i class="icon-trash"></i></a>
                                     </div>

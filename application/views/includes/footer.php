@@ -35,79 +35,129 @@ if($CurrentSecc===0){
 
     <script src="<? echo base_url('js/theme.js');?>"></script>
 
-    <? if ($CurrentSecc=="send"){ ?>
 
-    <script src="<? echo base_url('lib/fuelux.wizard.js');?>"></script>
-    <script src="<? echo base_url('js/sendRelease.js');?>"></script>
-    <script src="<? echo base_url('js/linkChecker.js');?>"></script>
+    <? switch ($CurrentSecc) 
+    {
+      case "send":
+      ?>
+      <script src="<? echo base_url('lib/fuelux.wizard.js');?>"></script>
+      <script src="<? echo base_url('js/sendRelease.js');?>"></script>
+      <script src="<? echo base_url('js/linkChecker.js');?>"></script>
+     <?
+        break;
+  
+        case "edit":
+      ?>
+      <script src="<? echo base_url('js/adminEdit.js');?>"></script>
+      <?
+        break;
+  
+        case "artist":
+      ?>
+      <script src="<? echo base_url('js/soundCloudSearch.js');?>"></script>
+      <script src="<? echo base_url('js/youtubeSearch.js');?>"></script>
+      <?
+        break;
 
-    <? } if ($CurrentSecc=="edit"){ ?>
+        case "label":
+      ?>
+      <script src="<? echo base_url('js/soundCloudSearch.js');?>"></script>
+      <script src="<? echo base_url('js/youtubeSearch.js');?>"></script>
+      <?
+        break;
 
-    <script src="<? echo base_url('js/adminEdit.js');?>"></script>
+        case "release":
+      ?>
+      <script type="text/javascript" src="<? echo base_url('lib/jquery.pnotify.min.js');?>"></script>
 
-    <? } if ($CurrentSecc=="artist"){ ?>
-
-    <script src="<? echo base_url('js/soundCloudSearch.js');?>"></script>
-    <script src="<? echo base_url('js/youtubeSearch.js');?>"></script>
-
-
-    <? } if ($CurrentSecc=="release"){ ?>
-
-    <script type="text/javascript" src="<? echo base_url('lib/jquery.pnotify.min.js');?>"></script>
-
-    <script src="<? echo base_url('js/linkChecker.js');?>"></script>
-    <script src="<? echo base_url('js/soundCloudSearch.js');?>"></script>
-    <script src="<? echo base_url('js/youtubeSearch.js');?>"></script>
+      <script src="<? echo base_url('js/linkChecker.js');?>"></script>
+      <script src="<? echo base_url('js/soundCloudSearch.js');?>"></script>
+      <script src="<? echo base_url('js/youtubeSearch.js');?>"></script>
 
       <? if ($this->ion_auth->is_admin()) { ?>
-      <script src="<? echo base_url('js/editRelease.js');?>"></script>
+        <script src="<? echo base_url('js/editRelease.js');?>"></script>
       <? }
+        break;
 
-  } if ($CurrentSecc=="search"){  ?>
+        case "search":
+      ?>
+      <script type="text/javascript">
+        $('#search_input').val('<? echo str_replace('-',' ',$search_name); ?>');
+        $('#search_input').focus();
+      </script>
 
-  <script type="text/javascript">
-    $('#search_input').val('<? echo str_replace('-',' ',$search_name); ?>');
-    $('#search_input').focus();
-  </script>
+      <?
+        break;
 
-<? } if ($CurrentSecc=="auth"){ ?>
 
-  <script type="text/javascript">
-    $("#account_submenu").slideDown("fast");
-  </script>
-  
- <? } if ($CurrentSecc=="user"){ ?>
+        case "auth":
+      ?>
+      <script type="text/javascript">
+        $("#account_submenu").slideDown("fast");
+      </script>
+      
+      <?
+        break;
 
-  <script src="<? echo base_url('lib/jquery.form.js');?>"></script>
-  <script type="text/javascript" src="<? echo base_url('lib/jquery.pnotify.min.js');?>"></script>
-  <link rel="styesheet" href="<? echo base_url('css/lib/jquery.pnotify.default.css'); ?>" type="text/css" media="screen" > 
-  <script src="<? echo base_url('js/userEdit.js');?>"></script>
+        case "user":
+      ?>
+      <script src="<? echo base_url('lib/jquery.form.js');?>"></script>
+      <script type="text/javascript" src="<? echo base_url('lib/jquery.pnotify.min.js');?>"></script>
+      <link rel="styesheet" href="<? echo base_url('css/lib/jquery.pnotify.default.css'); ?>" type="text/css" media="screen" > 
+      <script src="<? echo base_url('js/userEdit.js');?>"></script>
+      <?
+        break;
 
-<? } ?>
 
-<? if ($this->ion_auth->logged_in()) { ?>
+      default:
+        # code...
+        break;
+    }
+
+
+if ($this->ion_auth->logged_in()) { ?>
+
   <script src="<? echo base_url('js/userActions.js');?>"></script>
 
 <? } ?>
 
-                        <script type="text/javascript">
-                        //<![CDATA[
-                          (function() {
-                            var shr = document.createElement('script');
-                            shr.setAttribute('data-cfasync', 'false');
-                            shr.src = '//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';
-                            shr.type = 'text/javascript'; shr.async = 'true';
-                            shr.onload = shr.onreadystatechange = function() {
-                              var rs = this.readyState;
-                              if (rs && rs != 'complete' && rs != 'loaded') return;
-                              var site_id = '9de1183f31169e1bc13dce6dd7bb689b';
-                              try { Shareaholic.init(site_id); } catch (e) {}
-                            };
-                            var s = document.getElementsByTagName('script')[0];
-                            s.parentNode.insertBefore(shr, s);
-                          })();
-                        //]]>
-                        </script>
+
+<script type="text/javascript">
+//<![CDATA[
+  (function() {
+    var shr = document.createElement('script');
+    shr.setAttribute('data-cfasync', 'false');
+    shr.src = '//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';
+    shr.type = 'text/javascript'; shr.async = 'true';
+    shr.onload = shr.onreadystatechange = function() {
+      var rs = this.readyState;
+      if (rs && rs != 'complete' && rs != 'loaded') return;
+      var site_id = '9de1183f31169e1bc13dce6dd7bb689b';
+      try { Shareaholic.init(site_id); } catch (e) {}
+    };
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(shr, s);
+  })();
+//]]>
+</script>
+
+<script type="text/javascript">
+var shortest = {
+    "config": {
+        "token": "0c15feed1a3e494acedce3453cfeb3e5",
+        "domains": [
+            "novafile.com,rg.to,ul.to,freakshare.com,rapidgator.net,uploaded.net"
+        ]
+    }
+};
+(function() {
+   var script = document.createElement('script');
+   script.async = true;
+   script.src = '//cdn.shorte.st/link-converter.min.js';
+   var entry = document.getElementsByTagName('script')[0];
+   entry.parentNode.insertBefore(script, entry);
+})();
+</script>                                       
 
 </body>
 </html>

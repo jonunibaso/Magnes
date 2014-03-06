@@ -3,7 +3,7 @@ $(window).ready(function(){
 var search_input = $('#q').val();
 var keyword= encodeURIComponent(search_input);
 // Youtube API 
-var yt_url='http://gdata.youtube.com/feeds/api/videos?q='+keyword+'&format=5&max-results=6&v=2&alt=jsonc';
+var yt_url='http://gdata.youtube.com/feeds/api/videos?q='+keyword+'&format=5&max-results=6&v=2&alt=jsonc&key=AIzaSyDwdISYzcpLLoiB14UDIG5cwQMz75keRog';
 
 $.ajax({
 	type: "GET",

@@ -294,6 +294,8 @@ $metaD = "The Magnes is an open sourced community for music sharing, discussing 
             case 'label':
             ?>
             <link rel="stylesheet" href="<? echo base_url('css/compiled/index.css'); ?>" type="text/css" media="screen" > 
+            <link rel="stylesheet" href="<? echo base_url('css/soundcloud_search.css'); ?>" type="text/css" media="screen" > 
+           
             <?
             break;
 
