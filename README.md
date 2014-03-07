@@ -10,3 +10,7 @@ Coded with CodeIgniter, Bootstrap, SCM Player, SoundCloud API, and many Jquery P
 Fueled with Python + BeatifulSoup crawlers.
 
 Further Documentation coming soon!
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/marblecode/magnes/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
