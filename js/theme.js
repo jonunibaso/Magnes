@@ -5,7 +5,7 @@ $(function () {
   $('#search_input').bind("enterKey",function(e){
     
     if($('#search_input').val()!=""){
-      window.location.replace(CI.base_url+'search/all/'+$('#search_input').val().replace(' ','-'));
+      window.location.replace(CI.base_url+'search/all/'+$.trim($('#search_input').val()).replace(' ','-'));
     }
 
   });

@@ -5,7 +5,7 @@
 
             <div class="row-fluid head" style="margin-top: 50px;">
                 <div class="span12">
-                    <h2>View All Hot Releases</h2>
+                    <h2>Staff Picks</h2>
                 </div>
             </div>
 

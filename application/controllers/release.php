@@ -351,7 +351,7 @@ class Release extends CI_Controller {
 	    $this->load->database();
 	    $this->db->select('*');
 	    $this->db->from('release');
-	    $this->db->like('tracklist','â€“');
+	    $this->db->like('tracklist','<br/><br/>');
 	    $query = $this->db->get();
 	    $releases = $query->result();
 
@@ -362,7 +362,7 @@ class Release extends CI_Controller {
 
 	    foreach ($releases as $r) {
 
-	    	$nt = str_replace('â€“', '-', $r->tracklist);
+	    	$nt = str_replace('<br/><br/>', '<br/>', $r->tracklist);
 	    	/*
 	    	$oldDate = $r->date;
 	    	$newDate = str_replace('00-', '',$oldDate);

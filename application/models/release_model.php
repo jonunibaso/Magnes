@@ -365,6 +365,7 @@ function get_by_slug($slug)
   return $query->row();
 }
 
+
 function get_related($release)
 {
 
@@ -557,6 +558,27 @@ function rate_link($userID)
     return $query->result();
   }
 
+
+function get_by_style($style, $page = 1)
+  {
+
+    $offset = 20*($page-1);
+
+
+    $this->load->database();
+    $this->db->select('*, release.id as release_id');
+    $this->db->from('release');
+    $this->db->join('artist', 'artist.id = release.artist_id');
+    $this->db->join('labels', 'labels.id = release.labels_id' ,'left');
+    $this->db->join('music_genres', 'release.music_genres_id = music_genres.id');
+    $this->db->join('release_music_style', 'release_music_style.release_id = release.id' );
+    $this->db->join('music_styles', 'release_music_style.music_style_id = music_styles.id' );
+    $this->db->where('music_styles.style', $style);
+    $this->db->limit(20,$offset);
+    $this->db->order_by("release.views", "desc");
+    $query = $this->db->get();
+    return $query->result();
+  }
 /*
 function entry_modify()
   {

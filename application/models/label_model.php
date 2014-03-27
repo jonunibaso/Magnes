@@ -77,7 +77,7 @@ class Label_model extends CI_Model {
     $this->load->database();
 
 
-    $this->db->select('*, labels.id as label_id');
+    $this->db->select('*, labels.id as label_id, release.id as release_id');
     $this->db->from('release');
     $this->db->join('artist', 'artist.id = release.artist_id');
     $this->db->join('labels', 'labels.id = release.labels_id');

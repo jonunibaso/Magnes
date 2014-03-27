@@ -423,7 +423,13 @@ input.search{
 	border-bottom: 1px solid #dae3e9;
 	box-shadow: -3px 3px 3px -2px #f1f1f3;
 	border-radius: 0px 0px 0px 5px;
+	margin-right: 180px;
 }
+
+body{
+	min-width: 900px;
+}
+
 .content.wide-content {
 	margin-left: 0;
 	border-radius: 0;

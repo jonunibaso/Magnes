@@ -21,6 +21,34 @@ if($CurrentSecc===0){
 
 </div>
 </div>
+     <div style="width: 150px; position: absolute; right: 20px; top: 70px; ">
+                    <ul class="nav nav-list">
+                        <li class="nav-header">Explore Top Styles</li>
+<?
+        $varS = "";
+        $this->load->database();
+        $this->db->select('*, COUNT(release_music_style.music_style_id) AS num_releases');
+        $this->db->from('music_styles');
+        $this->db->join('release_music_style', 'release_music_style.music_style_id = music_styles.id');
+        $this->db->order_by("num_releases", "desc");
+        $this->db->group_by("release_music_style.music_style_id "); 
+        $this->db->limit(100);
+
+        //$this->db->order_by("release.id", "desc");
+
+        $query = $this->db->get();
+
+        $styles = $query->result();
+
+        foreach ($styles as $s) {
+            echo "<li><a href='".base_url('style/view')."/".str_replace(' ', '.',$s->style)."' style='font-size: 12px; color: #005580;'>".$s->style."</a></li>";
+        }
+?>
+</ul>
+    </div>
+</div>
+
+
     <script type="text/javascript"> 
       var CI = { 
         'base_url': '<?php echo base_url(); ?>', 
@@ -145,8 +173,8 @@ if ($this->ion_auth->logged_in()) { ?>
 var shortest = {
     "config": {
         "token": "0c15feed1a3e494acedce3453cfeb3e5",
-        "domains": [
-            "novafile.com,rg.to,ul.to,freakshare.com,rapidgator.net,uploaded.net"
+        "excludeDomains": [
+            "www.themagnes.com","kimonify.kimonolabs.com"
         ]
     }
 };
@@ -157,7 +185,7 @@ var shortest = {
    var entry = document.getElementsByTagName('script')[0];
    entry.parentNode.insertBefore(script, entry);
 })();
-</script>                                       
+</script>                             
 
 </body>
 </html>

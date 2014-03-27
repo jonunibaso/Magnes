@@ -78,6 +78,11 @@ $metaD = "The Magnes is an open sourced community for music sharing, discussing 
             $metaD = "Send your release and contribute the community";
 
             break;
+            
+            case 'style':
+                $metaD = "Exploring ".$release[0]->style;
+                echo "Explore Style ".$release[0]->style." Top Downloads | The Magnes ";
+            break;
 
             case 'artist':
 
@@ -217,7 +222,7 @@ $metaD = "The Magnes is an open sourced community for music sharing, discussing 
         }
         ?></title>
         <meta name="author" content="The Magnes">
-        <meta name="description" content="<? echo $metaD; ?>">
+        <meta name="description" content="<? echo substr($metaD,0,160); ?>">
 
         <meta name="keywords" content="free electronic music direct download 320 kbps mediafire mega rapidshare novafile zippishare uploaded turbobit">
         <meta name="robots" content="index, follow">
@@ -304,6 +309,12 @@ $metaD = "The Magnes is an open sourced community for music sharing, discussing 
             <link rel="stylesheet" href="<? echo base_url('css/compiled/index.css'); ?>" type="text/css" media="screen" >
             <link rel="stylesheet" href="<? echo base_url('css/soundcloud_search.css'); ?>" type="text/css" media="screen" > 
 
+            <?
+            break;
+
+            case 'style':
+            ?>
+            <link rel="stylesheet" href="<? echo base_url('css/compiled/index.css'); ?>" type="text/css" media="screen" >
             <?
             break;
 

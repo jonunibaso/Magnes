@@ -8,7 +8,7 @@
         <div id="pad-wrapper" class="form-page">
             <div class="row-fluid form-wrapper">
                 <!-- left column -->
-                <div class="span7 column">
+                <div class="span8 column">
                     <form itemscope itemtype="http://schema.org/MusicAlbum">
                         <meta content="<? echo base_url('release/download/'.$release->slug); ?>" itemprop="url" />
 
@@ -35,7 +35,7 @@
                         <div class="field-box">
                             <div class="release_info">Artist:</div>
                             <div class="span8 release_data">
-                                <a href="<? echo base_url('artist/view/'.$release->artist_slug);?>" class="link" data-original-title="Search <? echo $release->artist_name; ?> Releases" itemprop="byArtist"><? echo $release->artist_name; ?></a>
+                                <a href="<? echo base_url('artist/view/'.$release->artist_slug);?>" class="link" style="color: #005580;" data-original-title="Search <? echo $release->artist_name; ?> Releases" itemprop="byArtist"><? echo $release->artist_name; ?></a>
                             </div>
                         </div>
                         <div class="field-box">
@@ -49,7 +49,20 @@
                             <?}?>
                         </div>
 
-
+                            <? if ($release->label_name!="")
+                            {
+                                ?>
+                                <div class="field-box">
+                                    <div class="release_info">Label:</div>
+                                    <div class="span8 release_data">
+                                        <a href="<? echo base_url('label/view/'.$release->label_slug );?>" class="link" style="color: #005580;" data-original-title="Search more <? echo $release->label_name; ?> Releases" itemprop="publisher">
+                                            <? echo $release->label_name; ?>
+                                        </a>
+                                    </div>
+                                </div>
+                                <?
+                            }
+                            ?>
 
 
                             <div class="field-box">
@@ -79,8 +92,29 @@
                                 <? }else{?>
                                 <div class="span8 release_data" itemprop="genre"><? echo $release->genre; ?></div>
                                 <?}?>
+                            </div>   
+                            <?
+                              $varS = "";
+                              $this->load->database();
+                              $this->db->select('*');
+                              $this->db->from('release_music_style');
+                              $this->db->join('music_styles', 'release_music_style.music_style_id = music_styles.id');
+                              $this->db->where('release_music_style.release_id', $release->release_id);
+                              $query = $this->db->get();
+                              $styles = $query->result();
 
-                            </div>    
+                              foreach ($styles as $s) {
+                                     $varS .=  "<a href='".base_url('style/view')."/".str_replace(' ', '.',$s->style)."' style='color: #005580; margin-left: 10px;'>".$s->style."</a>";
+                              }
+                                if($varS!=""){
+                                    ?>
+                              <div class="field-box">
+                                    <div class="release_info">Style:</div>
+                                    <div class="span8 release_data" itemprop="datePublished"><? echo $varS; ?></div>
+                               </div>
+                               <?
+                                }
+                            ?> 
                             <div class="field-box">
                                 <div class="release_info">Release Date:</div>
                                 <? if ($this->ion_auth->is_admin()){ ?>
@@ -91,28 +125,30 @@
                                 <?}?>
 
                             </div>
+                            <? if ($release->discogsUrl!="" && $release->discogsUrl!= "not found" ){
+                                ?>
+                                <div class="field-box">
+                                    <div class="release_info">Discogs Url:</div>
+                                    <div class="span8 release_data" itemprop="datePublished"><a href="<? echo $release->discogsUrl; ?>" style="color: #005580;" target="_blank"><? echo $release->discogsUrl; ?></a></div>
+                               </div>
+
+
+
+                                <?
+                            }?>
+                            <? if ($release->extra_info!=""){ ?>
+
                             <div class="field-box">
                                 <div class="release_info">Extra Info:</div>
                                 <textarea class="span8" rows="5" readonly style="height: 60px; cursor: pointer; margin-left: 15px; background: none repeat scroll 0 0 #FFFFFF; color: #333333;" ><? echo $release->extra_info; ?></textarea>
                             </div>
+                            <?}?>
                             <? if ($this->ion_auth->is_admin()){ ?>
                             <br><a id="saveTrackBtn" class="btn">Save</a><br><hr/>
                             <? }?>   
 
 
-                            <? if ($release->label_name!="")
-                            {
-                                ?>
-                                <div class="field-box">
-                                    <div class="release_info">Label:</div>
-                                    <div class="span8 release_data">
-                                        <a href="<? echo base_url('label/view/'.$release->label_slug );?>" class="link" data-original-title="Search more <? echo $release->label_name; ?> Releases" itemprop="publisher">
-                                            <? echo $release->label_name; ?>
-                                        </a>
-                                    </div>
-                                </div>
-                                <?
-                            }
+                            <?
                             if ($this->ion_auth->is_admin())
                                 { ?>
                             <div class="field-box">
@@ -209,7 +245,7 @@
                                                         echo "style='background: #81BD82;'";
                                                     }
                                                     ?>>
-                                                    <a <? echo "onclick='addToList(".$row->listID.");'";  ?>><? echo $row->list_name; ?></a>
+                                                    <a <? echo "onclick='addToList(".$row->listID.");' href='#'";  ?>><? echo $row->list_name; ?></a>
                                                 </li>
                                                 <?
                                             }
@@ -228,7 +264,7 @@
                 </div>
 
                 <!-- right column -->
-                <div class="span5 column pull-right">
+                <div class="span4 column pull-right">
 
 
                   <div class="well" style="padding: 8px 0; margin-top: 20px;">
@@ -308,7 +344,7 @@
                         <h3>Direct Download Links</h3>
                     </div>
                 </div>
-                <div class="row-fluid section" style="margin-top: 10px;">
+                <div class="row-fluid section" id="link_list" style="margin-top: 10px;">
                     <div class="table-products" style="margin-top: -20px; border: none;">
                         <div id="link_adder" class="well">
                             <div class="span1" style="font-size: 14px; padding-top: 5px;">
@@ -327,7 +363,7 @@
                                 </div>
                             </div>
                             <div class="span1">
-                                <a id="btn_add_url" class="btn-flat new-product" style="font-size: 16px;">Add</a>
+                                <a id="btn_add_url"  href="#link_list" class="btn-flat new-product" style="font-size: 16px;">Add</a>
                             </div>
                         </div>
 

@@ -206,6 +206,7 @@ $user = $this->ion_auth->user()->row();
 }
 ?>
 
+
 <li>
     <ul class="submenu" id="about_menu" style="display: block; margin-top: 20px;">
        <li>
@@ -226,6 +227,7 @@ $user = $this->ion_auth->user()->row();
     </ul>
 </li>
 </ul>
+
 </div>
 <!-- end sidebar -->
 

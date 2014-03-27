@@ -35,7 +35,7 @@
         <? if(!isset($previous)){ ?>
             <div class="row-fluid head" style="margin-top: 50px;">
                 <div class="span12">
-                    <h2>Hot Releases<a href="<? echo base_url('front/hotReleases'); ?>"><span style="font-size: 18px; margin-left: 10px; color: #005580;"><i class="icon-eye-open" style="margin-right: 6px;"></i>View All</span></a></h2>
+                    <h2 style="float: left;">Staff Picks</h2><a href="<? echo base_url('front/hotReleases'); ?>"><span style="font-size: 18px; margin-left: 10px; color: #005580; float: left;"><i class="icon-eye-open" style="margin-right: 6px;"></i>View All</span></a>
                 </div>
             </div>
 
@@ -65,6 +65,21 @@
                         </a>
                         <? } ?>
                         <? echo $row->genre; ?></h5>
+                        <h6>
+                        <?
+                              $varS = "";
+                              $this->load->database();
+                              $this->db->select('*');
+                              $this->db->from('release_music_style');
+                              $this->db->join('music_styles', 'release_music_style.music_style_id = music_styles.id');
+                              $this->db->where('release_music_style.release_id', $row->release_id);
+                              $query = $this->db->get();
+                              $styles = $query->result();
+
+                              foreach ($styles as $s) {
+                                     echo $s->style." ";
+                              }
+                        ?>
                         <div style="margin-top:30px;">
                             <a itemprop="url" class="btn-flat default" href="<? echo base_url('release/download/'.$row->slug);?>" style="margin-top: -10px; font-size: 12px;">Download</a>
                         </div>
@@ -165,6 +180,7 @@
     <?}
     ?>
 
+
     <div id="pad-wrapper" style="margin-top: 0px;">
         <div class="table-products section" style="margin-top: 0px; border: none; box-shadow: none;">
             <div class="row-fluid head">
@@ -207,7 +223,10 @@
                                 <th class="span1">
                                     Year
                                 </th>
-                                <th class="span2">
+                                <th class="span1">
+                                    Style
+                                </th>
+                                <th class="span1">
                                     Status
                                 </th>
                             </tr>
@@ -237,7 +256,7 @@
                                         </div>  
                                     </td>
                                     <td>
-                                        <a href="<? echo base_url('artist/view/'.$row->artist_slug);?>" class="link" data-original-title="Search <? echo $row->artist_name; ?> Releases" itemprop="byArtist"><? echo $row->artist_name; ?></a>
+                                        <a href="<? echo base_url('artist/view/'.$row->artist_slug);?>" class="link" style="color: #005580;" data-original-title="Search <? echo $row->artist_name; ?> Releases" itemprop="byArtist"><? echo $row->artist_name; ?></a>
                                     </td>
                                     <td>
                                         <a href="<? echo base_url('release/download/'.$row->slug);?>" itemprop="name"><? echo $row->title; ?></a>
@@ -246,12 +265,30 @@
                                        <? echo $row->genre; ?>
                                    </td>
                                    <td>
-                                    <a href="<? echo base_url('label/view/'.$row->label_slug);?>" class="link" data-original-title="Search more <? echo $row->label_name; ?> Releases" itemprop="publisher">
+                                    <a href="<? echo base_url('label/view/'.$row->label_slug);?>" class="link" style="color: #005580;" data-original-title="Search more <? echo $row->label_name; ?> Releases" itemprop="publisher">
                                         <? echo $row->label_name; ?>
                                     </a>
                                 </td>
                                 <td itemprop="datePublished">
                                    <? echo $row->date; ?>
+                               </td>
+                               <td>
+                                   <? 
+
+                             $varS = "";
+                              $this->load->database();
+                              $this->db->select('*');
+                              $this->db->from('release_music_style');
+                              $this->db->join('music_styles', 'release_music_style.music_style_id = music_styles.id');
+                              $this->db->where('release_music_style.release_id', $row->release_id);
+                              $query = $this->db->get();
+                              $styles = $query->result();
+
+                              foreach ($styles as $s) {
+            echo "<a href='".base_url('style/view')."/".str_replace(' ', '.',$s->style)."' style='font-size: 12px; color: #005580;'>".$s->style."</a>";
+                              }
+
+                                 ?>
                                </td>
                                <td>
                                 <span class="label label-success">Active</span>

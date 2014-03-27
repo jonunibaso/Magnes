@@ -29,7 +29,7 @@
                             $s = "active";
                         }
                         ?>
-                        <a class="btn-glow <? echo $s; ?>" id="toggleFavLabelBtn"><i class="icon-star" style="margin-right: 5px;"></i>
+                        <a class="btn-glow <? echo $s; ?>" id="toggleFavLabelBtn" href="#"><i class="icon-star" style="margin-right: 5px;"></i>
                             <? if ($s!=""){
                                 echo "Favorite";
 
@@ -50,23 +50,26 @@
                     <table class="table table-hover">
                         <thead>
                             <tr>
-                                <th class="span3">
+                                <th class="span1">
                                     Cover
                                 </th>
-                                <th class="span3">
+                                <th class="span2">
                                     Artist
                                 </th>
                                 <th class="span3">
                                     <span class="line"></span>Release
                                 </th>
 
-                                <th class="span3">
+                                <th class="span1">
                                     <span class="line"></span>Genre
                                 </th>
-                                <th class="span3">
+                                <th class="span1">
                                     <span class="line"></span>Year
                                 </th>
-                                <th class="span3">
+                                <th class="span2">
+                                    <span class="line"></span>Style
+                                </th>
+                                <th class="span2">
                                     <span class="line"></span>Status
                                 </th>
                             </tr>
@@ -98,7 +101,7 @@
                                 </td>
                                 <td>
 
-                                    <a href="<? echo base_url('artist/view/'.$release[0]->artist_slug);?>" class="link" data-original-title="Search <? echo $release[0]->artist_name; ?> Releases" itemprop="byArtist"><? echo $release[0]->artist_name; ?></a>
+                                    <a href="<? echo base_url('artist/view/'.$release[0]->artist_slug);?>" class="link" style="color: #005580;" data-original-title="Search <? echo $release[0]->artist_name; ?> Releases" itemprop="byArtist"><? echo $release[0]->artist_name; ?></a>
                                 </td>
                                 <td >
                                   <a href="<? echo base_url('release/download/'.$release[0]->slug);?>" itemprop="name"><? echo $release[0]->title; ?></a>
@@ -109,6 +112,23 @@
                              <td itemprop="datePublished">
                                  <? echo $release[0]->date; ?>
                              </td>
+                             <td >
+                            <? 
+                              $varS = "";
+                              $this->load->database();
+                              $this->db->select('*');
+                              $this->db->from('release_music_style');
+                              $this->db->join('music_styles', 'release_music_style.music_style_id = music_styles.id');
+                              $this->db->where('release_music_style.release_id',  $release[0]->release_id);
+                              $query = $this->db->get();
+                              $styles = $query->result();
+
+                              foreach ($styles as $s) {
+                                     echo $s->style." ";
+                              }
+                                 ?>
+                             </td>
+
                              <td>
                                 <span class="label label-success">Active</span>
                                 <ul class="actions">
